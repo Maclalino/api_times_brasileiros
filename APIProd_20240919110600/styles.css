@@ -1,0 +1,96 @@
+/* Estilo para o background gradient */
+body {
+    background: linear-gradient(to right, #000080, #001f4d); /* Azul marinho gradiente */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o título */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+/* Estilo para a lista de times */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente com leve opacidade */
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    
+}
+
+/* Estilo para os botões */
+button {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #002f6c;
+}
+
+/* Estilo para o formulário de novo time */
+#form-novo-time {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#form-novo-time input {
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+    border: none;
+    border-radius: 5px;
+}
+
+#form-novo-time button {
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-novo-time button:hover {
+    background-color: #002f6c;
+}
+#botao{
+    background-color: #bad4fb;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Torna o botão um bloco para aplicar margens */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 40px;
+    
+}
+#botao a{
+    text-decoration: none;
+}

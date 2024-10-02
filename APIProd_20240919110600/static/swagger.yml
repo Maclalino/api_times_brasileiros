@@ -1,0 +1,121 @@
+openapi: 3.0.0
+info:
+  title: API de Times de Futebol
+  description: API para gerenciar times de futebol
+  version: "1.0.0"
+
+servers:
+  - url: http://localhost:5000/
+
+paths:
+  /times:
+    get:
+      summary: Lista todos os times
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    nome:
+                      type: string
+                    estado:
+                      type: string
+                    titulos:
+                      type: integer
+
+    post:
+      summary: Adiciona um novo time
+      requestBody:
+        description: Dados do novo time
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                estado:
+                  type: string
+                titulos:
+                  type: integer
+      responses:
+        '201':
+          description: Time criado com sucesso
+
+  /times/{id}:
+    get:
+      summary: Obtém os detalhes de um time específico
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nome:
+                    type: string
+                  estado:
+                    type: string
+                  titulos:
+                    type: integer
+        '404':
+          description: Time não encontrado
+
+    put:
+      summary: Atualiza os dados de um time específico
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Dados atualizados do time
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                estado:
+                  type: string
+                titulos:
+                  type: integer
+      responses:
+        '200':
+          description: Time atualizado com sucesso
+        '404':
+          description: Time não encontrado
+
+    delete:
+      summary: Exclui um time específico
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Time excluído com sucesso
+        '404':
+          description: Time não encontrado
